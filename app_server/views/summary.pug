@@ -32,41 +32,24 @@ head
         .col-12
             h1= pageHeader.title 
                 small &nbsp;#{pageHeader.strapline}
+
 .row.banner
-  .col-4
-        .card.mb-3
-            h3.card-header Card header
-            .card-body
-              h5.card-title Special title treatment
-              //h6.card-subtitle.text-muted Support card subtitle
-            //svg.d-block.user-select-none(xmlns='http://www.w3.org/2000/svg', width='100%', height='200', aria-label='Placeholder: Image cap', focusable='false', role='img', preserveaspectratio='xMidYMid slice', viewbox='0 0 318 180', style='font-size:1.125rem;text-anchor:middle')
-              //rect(width='100%', height='100%', fill='#868e96')
-              //text(x='50%', y='50%', fill='#dee2e6', dy='.3em') Image cap
-            .card-body
-              p.card-text
-                 | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
-  .col-4
-        .card.mb-3
-            h3.card-header Card header
-            .card-body
-              h5.card-title Special title treatment
-              h6.card-subtitle.text-muted Support card subtitle
-            svg.d-block.user-select-none(xmlns='http://www.w3.org/2000/svg', width='100%', height='200', aria-label='Placeholder: Image cap', focusable='false', role='img', preserveaspectratio='xMidYMid slice', viewbox='0 0 318 180', style='font-size:1.125rem;text-anchor:middle')
-              rect(width='100%', height='100%', fill='#868e96')
-              text(x='50%', y='50%', fill='#dee2e6', dy='.3em') Image cap
-            .card-body
-              p.card-text
-                 | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
-  .col-4
+  each book in summary 
+      .col-4
+        .book
         .card.border-primary.mb-3(style='max-width: 20rem;')
-          .card-header Header
+          h3.card-header= book.name 
           .card-body
-            h4.card-title Primary card title
-            p.card-text
-              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
-        .card.border-secondary.mb-3(style='max-width: 20rem;')
-          .card-header Header
-          .card-body
-            h4.card-title Secondary card title
-            p.card-text
-              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+            strong.card-title= book.author
+            p.card-text= book.pages
+              | pages 
+            strong
+              | Genre : 
+              p=book.genre
+            strong
+              | Published : 
+              p= book.published
+            p.card-text= book.description
+              
+
+  
