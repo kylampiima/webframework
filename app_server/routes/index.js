@@ -1,9 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-const ctrlMain = require('../controllers/main'); 
-/* GET home page. */
-router.get('/', ctrlMain.index); 
+const ctrlLogins = require('../controllers/logins'); 
+const ctrlInformation = require('../controllers/information');
+
+/* Login pages */
+router.get('/', ctrlLogins.register);
+router.get('/login', ctrlLogins.login);
+/* Information pages */
+router.get('/book/summary', ctrlInformation.summary);
 module.exports = router;
 
 
