@@ -29,13 +29,13 @@ head
           button.btn.btn-secondary.my-2.my-sm-0(type='submit') Search
 
   .row.banner
-        .col-12
+        .col-12.col-md-8
             h1= pageHeader.title 
                 small &nbsp;#{pageHeader.strapline}
 
 .row.banner
   each book in summary 
-      .col-4
+      .col-12.col-md-4
         .book
         .card.border-primary.mb-3(style='max-width: 20rem;')
           h3.card-header= book.name 

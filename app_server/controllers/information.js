@@ -1,4 +1,3 @@
-/* GET home page */
 const summary = function(req, res){ 
     res.render('summary', {
         title: 'Book Summaries ',
