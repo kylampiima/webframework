@@ -1,0 +1,28 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title Login Page
+  // Link to the Bootstrap CSS file
+  link(rel="stylesheet" href="https://bootswatch.com/5/journal/bootstrap.min.css")
+  script(src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js")
+  script(src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.bundle.min.js")
+  
+.container.mt-5
+  .row.justify-content-center
+    .col-md-6
+      .card
+        .card-header Login
+        .card-body
+          form(action="/book/summary", method="get", role="form") 
+            .form-group
+              label(for='username') Username
+              input#username.form-control(type='text', placeholder='Enter your username')
+            .form-group
+              label(for='password') Password
+              input#password.form-control(type='password', placeholder='Enter your password')
+            button.btn.btn-primary.btn-block(type='submit') Login
+        .card-footer
+          p.mb-0
+            | Don&apos;t have an account? 
+            a(href='/') Register here
