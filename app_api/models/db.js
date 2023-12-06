@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose');
 const dbURI = "mongodb+srv://user1:user1@cluster0.cbvbm0u.mongodb.net/webProject?retryWrites=true&w=majority";
 
@@ -14,3 +15,5 @@ mongoose.connect(
   console.log("could not connect");
 }
 require('./summary');
+
+

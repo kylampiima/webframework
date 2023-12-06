@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Summary = mongoose.model('Summary');
+const Sum = mongoose.model('Summary');
 const loginsCreate = function (req, res) { 
     res
     .status(200)
